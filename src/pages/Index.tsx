@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProjectsSection } from "@/components/ProjectsSection";
-import { Github, Linkedin, Mail, Download, MapPin, Calendar } from "lucide-react";
+import { Github, Linkedin, Mail, Download, MapPin, Calendar, FileText} from "lucide-react";
 
 // Import your images
 import profileImage from "../assets/profile.jpg";
@@ -12,27 +12,30 @@ const Index = () => {
   const [aboutText, setAboutText] = useState("");
 
   useEffect(() => {
-    // Replace this with your actual about text or load from file
-    const sampleAboutText = `Soy una Ingeniera Biomédica apasionada por la intersección entre tecnología y salud. Mi experiencia se centra en el desarrollo de software médico, procesamiento de señales biomédicas y aplicaciones de inteligencia artificial en el ámbito sanitario.
 
-A lo largo de mi carrera académica y profesional, he trabajado en diversos proyectos que van desde visualizadores de imágenes médicas hasta dispositivos de monitoreo no invasivo. Mi objetivo es contribuir al avance de la tecnología médica para mejorar la calidad de vida de las personas.
+    const sampleAboutText = `Mi nombre es Florencia Canale, pero todos me dicen Floqui. Soy de San Martín de los andes y vivo en Buenos Aires. Soy Bioingeniera recientemente recibida del Instituto Tecnológico de Buenos Aires y espero con ansias iniciar esta nueva etapa de mi vida profesional. 
 
-Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en frameworks modernos como React y .NET. Me apasiona el aprendizaje continuo y estoy siempre buscando nuevos desafíos que me permitan crecer profesionalmente.`;
+A lo largo de toda mi carrera en el ITBA desarrollé una gran pasión por los proyectos de innovación en tecnología médica y, en cada oportunidad que se presentó, aproveche esa motivación para crear productos innovadores con la ayuda de la electrónica, programación, aprendizaje automático y, por supuesto, amigos.
+
+Mi motivación es crear tecnologías que impacten en la vida de las personas, que los ayuden en su día a día y que acerquen a la sociedad un poco más a los seres humanos del futuro. Hoy en día, estoy en búsqueda de un oportunidad laboral que me permita trabajar en equipo para resolver problemas en el ámbito de la salud mediante el desarrollo de software.
+
+Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en frameworks modernos como React y .NET. Me apasiona el aprendizaje continuo y estoy siempre en busca de nuevos desafíos que me permitan crecer.`;
     
     setAboutText(sampleAboutText);
   }, []);
 
   const skills = [
     { category: "Lenguajes de Programación", items: ["Python", "C#", "Java", "JavaScript", "TypeScript"] },
-    { category: "Frameworks & Librerías", items: [".NET", "React", "PyQt5", "Scikit-learn", "OpenCV"] },
+    { category: "Frameworks & Librerías", items: [".NET", "React", "PyQt5", "Scikit-learn", "OpenCV", "ORMs"] },
     { category: "Herramientas & Tecnologías", items: ["AWS", "Git", "PostgreSQL", "Unity", "Arduino"] },
-    { category: "Especialidades", items: ["Bioinformática", "ML en salud", "Procesamiento de señales", "Imágenes médicas"] }
+    { category: "Especialidades", items: ["Bioinformática", "ML en salud", "Procesamiento de señales", "Imágenes médicas", "Software en Salud"] }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero text-white overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center relative min-h-screen flex items-center justify-center text-white overflow-hidden
+    bg-[url('/sanma3.jpg')] bg-cover bg-center bg-no-repeat text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
@@ -52,21 +55,21 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10"
+              className="border-white/30 text-black hover:bg-white/10"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contactar
             </Button>
           </div>
           <div className="flex justify-center gap-4">
-            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
+            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={() => window.open('https://github.com/Floquicanale')}>
               <Github className="w-5 h-5" />
             </Button>
-            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
+            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={() => window.open('https://www.linkedin.com/in/florencia-canale-03b430209/')}>
               <Linkedin className="w-5 h-5" />
             </Button>
-            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
-              <Mail className="w-5 h-5" />
+            <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" onClick={() => window.open('/resume.pdf', '_blank')}>
+              <FileText className="w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -100,15 +103,12 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
           </div>
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-custom-lg">
+              <div className="w-80 h-85 rounded-2xl overflow-hidden shadow-custom-lg">
                 <img 
                   src={profileImage} 
                   alt="Florencia Canale" 
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-                <Download className="w-8 h-8 text-white" />
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">¡Trabajemos Juntos!</h2>
             <p className="text-muted-foreground text-lg">
-              Estoy disponible para nuevas oportunidades. ¡Contáctame!
+              Estoy disponible para nuevas oportunidades. ¡Contactame!
             </p>
           </div>
           
@@ -198,7 +198,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
                     required 
                     rows={6}
                     className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                    placeholder="Cuéntame sobre tu proyecto o oportunidad..."
+                    placeholder="Contame más sobre tu proyecto..."
                   ></textarea>
                 </div>
                 <div className="text-center">
