@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: 'Floquicanale.github.io',
+  base: '/Floquicanale.github.io/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
