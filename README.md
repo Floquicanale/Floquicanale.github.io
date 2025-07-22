@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/78717953-4e87-41fe-92cd-0aa36aa0a366
+Project created to showcase Florencia Canale's professional profile
 
 ## What technologies are used for this project?
 
