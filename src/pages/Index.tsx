@@ -156,7 +156,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">¡Trabajemos Juntos!</h2>
             <p className="text-muted-foreground text-lg">
-              Estoy disponible para nuevas oportunidades. ¡Contactame!
+              Estoy disponible para nuevas oportunidades. Formulario de contacto:
             </p>
           </div>
           
