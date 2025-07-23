@@ -27,7 +27,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
   const skills = [
     { category: "Lenguajes de Programación", items: ["Python", "C#", "Java", "JavaScript", "TypeScript"] },
     { category: "Frameworks & Librerías", items: [".NET", "React", "PyQt5", "Scikit-learn", "OpenCV", "ORMs"] },
-    { category: "Herramientas & Tecnologías", items: ["AWS", "Git", "PostgreSQL", "Unity", "Arduino"] },
+    { category: "Herramientas & Tecnologías", items: ["AWS", "Azure", "Git", "PostgreSQL", "Unity", "Arduino"] },
     { category: "Especialidades", items: ["Bioinformática", "ML en salud", "Procesamiento de señales", "Imágenes médicas", "Software en Salud"] }
   ];
 
