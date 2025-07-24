@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Eye } from "lucide-react";
 
 interface ProjectCardProps {
+  language: "es" | "en";
   title: string;
   description: string;
   technologies: string[];
@@ -12,7 +13,7 @@ interface ProjectCardProps {
   onViewDetails: () => void;
 }
 
-export const ProjectCard = ({ 
+export const ProjectCard = ({ language,
   title, 
   description, 
   technologies, 
@@ -64,7 +65,7 @@ export const ProjectCard = ({
             className="flex items-center gap-2 px-3 py-2 bg-primary text-primary-foreground rounded-lg shadow-md hover:bg-primary-dark transition-colors duration-200"
           >
             <Eye className="w-4 h-4" />
-            <span className="text-sm font-medium">Ver detalles</span>
+            <span className="text-sm font-medium">{language === "es" ? "Ver detalles" : "View Details"}</span>
           </button>
         </div>
       </div>

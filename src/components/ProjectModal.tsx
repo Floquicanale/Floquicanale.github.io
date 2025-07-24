@@ -12,6 +12,7 @@ import { ExternalLink, Github, X } from "lucide-react";
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
+  language: "es" | "en";
   project: {
     title: string;
     description: string;
@@ -26,7 +27,7 @@ interface ProjectModalProps {
   } | null;
 }
 
-export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
+export const ProjectModal = ({ isOpen, onClose, language, project }: ProjectModalProps) => {
   if (!project) return null;
 
   return (
@@ -57,7 +58,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
 
           {/* Technologies */}
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">Herramienteas Utilizadas</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{language === "es" ? "Herramienteas Utilizadas" : "Used Tools"}</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
                 <Badge 
@@ -73,7 +74,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
           {/* Full Description */}
           {project.fullDescription && (
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Descripción Detallada</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{language === "es" ? "Descripción Detallada" : "Detailed Description"}</h3>
               <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                 {project.fullDescription}
               </p>
@@ -83,7 +84,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
           {/* Features */}
           {project.features && project.features.length > 0 && (
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Características Principales</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{language === "es" ? "Características Principales" : "Main Features"}</h3>
               <ul className="space-y-2">
                 {project.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -98,7 +99,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
           {/* Challenges */}
           {project.challenges && project.challenges.length > 0 && (
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Desafíos Técnicos</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{language === "es" ? "Desafíos Técnicos" : "Technical Challenges"}</h3>
               <ul className="space-y-2">
                 {project.challenges.map((challenge, index) => (
                   <li key={index} className="flex items-start">
@@ -113,7 +114,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
           {/* Outcomes */}
           {project.outcomes && project.outcomes.length > 0 && (
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Resultados</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{language === "es" ? "Resultados" : "Results"}</h3>
               <ul className="space-y-2">
                 {project.outcomes.map((outcome, index) => (
                   <li key={index} className="flex items-start">
@@ -134,7 +135,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
                 className="flex items-center gap-2"
               >
                 <Github className="w-4 h-4" />
-                Ver Código
+                {language === "es" ? "Ver Código" : "View Code"}
               </Button>
             )}
             {project.link && (
@@ -143,7 +144,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
                 className="flex items-center gap-2 bg-gradient-primary hover:opacity-90"
               >
                 <ExternalLink className="w-4 h-4" />
-                Ver Proyecto
+                {language === "es" ? "Ver Proyecto" : "View Project"}
               </Button>
             )}
           </div>
