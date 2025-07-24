@@ -57,7 +57,7 @@ export const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) =>
 
           {/* Technologies */}
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-3">Tecnologías Utilizadas</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">Herramienteas Utilizadas</h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
                 <Badge 

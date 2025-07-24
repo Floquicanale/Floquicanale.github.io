@@ -13,7 +13,7 @@ const Index = () => {
 
   useEffect(() => {
 
-    const sampleAboutText = `Mi nombre es Florencia Canale, pero todos me dicen Floqui. Soy de San Martín de los andes y vivo en Buenos Aires. Soy Bioingeniera recientemente recibida del Instituto Tecnológico de Buenos Aires y espero con ansias iniciar esta nueva etapa de mi vida profesional. 
+    const sampleAboutText = `Hola, soy Florencia Canale — aunque la mayoría me conoce como Floqui. Nací en San Martín de los Andes pero actualmente vivo en Buenos Aires. Soy Bioingeniera recientemente recibida del Instituto Tecnológico de Buenos Aires y espero con ansias iniciar esta nueva etapa de mi vida profesional. 
 
 A lo largo de toda mi carrera en el ITBA desarrollé una gran pasión por los proyectos de innovación en tecnología médica y, en cada oportunidad que se presentó, aproveche esa motivación para crear productos innovadores con la ayuda de la electrónica, programación, aprendizaje automático y, por supuesto, amigos.
 
@@ -42,7 +42,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
             Florencia Canale
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90">
-            Bioengineer | Software Developer | AI & Data in Healthcare
+            Bioingeniera | Desarrolladora de Software | IA & Análisis de Datos en Salud
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button 
@@ -198,7 +198,7 @@ Tengo experiencia sólida en lenguajes como Python, C# y Java, así como en fram
                     required 
                     rows={6}
                     className="w-full px-4 py-3 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                    placeholder="Contame más sobre tu proyecto..."
+                    placeholder="Contame sobre tu proyecto..."
                   ></textarea>
                 </div>
                 <div className="text-center">

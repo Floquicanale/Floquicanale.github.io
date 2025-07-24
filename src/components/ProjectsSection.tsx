@@ -38,7 +38,7 @@ El backend se desarrolló siguiendo una arquitectura Clean con C# y .NET Framewo
       "Implementación "
     ],
     outcomes: [
-      "Sistema válidado con pruebas de usuarios: médicos y pacientes",
+      "Sistema validado con pruebas de usuarios: médicos y pacientes",
       "Experiencia de usuario clasificada como 'intuitiva'",
       "Elogio a la velocidad en las distintas consultas a la página",
       "Posibles mejoras en herramientas de visualización"
@@ -49,8 +49,8 @@ El backend se desarrolló siguiendo una arquitectura Clean con C# y .NET Framewo
     description: "Dispositivo de Medición de Presión Arterial No Invasiva utilizando Cálculo de PTT",
     fullDescription: `HERNII es un dispositivo innovador para la medición no invasiva de la presión arterial basado en el cálculo del Tiempo de Tránsito de Pulso (PTT). El proyecto combina hardware con Arduino y una aplicación móvil desarrollada en Android Studio.
 
-El dispositivo utiliza sensores especializados para capturar señales de pulso en diferentes puntos del cuerpo y calcula la presión arterial mediante algoritmos avanzados de procesamiento de señales. La aplicación móvil permite monitorear en tiempo real y almacenar historial de mediciones.`,
-    technologies: ["Java", "Arduino", "Android Studio", "Bluetooth", "Signal Processing", "FireBase"],
+El dispositivo utiliza sensores especializados (PPG, ECG y acelerómetro) para capturar el pulso en diferentes puntos del cuerpo, siguiendo su recorrido desde el corazón hasta la mano y calcula la presión arterial mediante algoritmos avanzados de procesamiento de señales. La aplicación móvil permite monitorear en tiempo real y almacenar historial de mediciones.`,
+    technologies: ["Java", "Arduino", "Android Studio", "Bluetooth", "Signal Processing", "FireBase", "ECG", "PPG"],
     image: hernii,
     github: "https://github.com/Floquicanale/hernii",
     features: [
@@ -69,8 +69,9 @@ El dispositivo utiliza sensores especializados para capturar señales de pulso e
       "Diseño de la interfaz de usuario"
     ],
     outcomes: [
-      "Precisión del 95% comparado con métodos tradicionales",
-      "Prototipo funcional validado clínicamente",
+      "Demuestra la viabilidad de medir la presión con el PTT con un error aceptable",
+      "Selección de algoritmo de cálculo de presión discriminado por RSME para presión diastólica y sistólica",
+      "Prototipo funcional validado con múltiples sujetos de distintas edades y sexos",
       "Reconocimiento en feria de innovación ITBA"
     ]
   },
@@ -106,9 +107,9 @@ Utilizando Python y bibliotecas especializadas como Scikit-learn y Pandas, se im
   {
     title: "Interfaz de Usuario para IVUS",
     description: "Software en Python para análisis de ultrasonido intravascular.",
-    fullDescription: `Desarrollo de una interfaz de usuario para el análisis de imágenes de ultrasonido intravascular (IVUS). El software permite a los cardiólogos visualizar y analizar imágenes IVUS para evaluar la características vasculares y planificar colocación de stents.
+    fullDescription: `Desarrollo de una interfaz de usuario para el análisis de imágenes de ultrasonido intravascular (IVUS). El software permite a los cardiólogos visualizar y analizar imágenes IVUS para evaluar las características vasculares y planificar colocación de stents.
 
-La aplicación incluye herramientas de medición automática, detección de placas arterial cálcica y cálculo del coeficiente de areas que determina la necesidad de un stent. Desarrollado con Python, PyQt5, OpenCV y funciones propias para procesamiento de imágenes médicas.`,
+La aplicación incluye herramientas de medición automática, detección de placa arterial cálcica y cálculo del coeficiente de areas que determina la necesidad de un stent. Desarrollado con Python, PyQt5, OpenCV y funciones propias para procesamiento de imágenes médicas.`,
     technologies: ["Python", "PyQt5", "OpenCV", "NumPy", "SciPy", "DICOM", "Region Growing"],
     image: ivus,
     github: "https://github.com/Floquicanale/TP-PIB",
@@ -140,7 +141,7 @@ El sistema incluye ejercicios validados por la posición de la mano para asegura
     github: "https://github.com/Floquicanale/KineVirtual",
     link: "https://www.youtube.com/watch?v=7g30DdFGjEw",
     features: [
-      "Entornos virtuales inmersivos para rehabilitación",
+      "Entorno virtual inmersivos para rehabilitación",
       "Ejercicios validados por la posición de la mano y sonido de aprobación al completar cada ejercicio",
       "Sistema de seguimiento de movimientos 3D",
       "Ludificación para motivar a los pacientes"
