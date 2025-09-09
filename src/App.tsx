@@ -5,8 +5,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import favicon from './assets/tornado.svg';
 
 const queryClient = new QueryClient();
+const link = document.createElement('link');
+link.rel = 'icon';
+link.type = 'image/svg+xml';
+link.href = favicon;
+document.head.appendChild(link);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -16,7 +22,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
