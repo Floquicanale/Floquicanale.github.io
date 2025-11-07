@@ -18,7 +18,7 @@ const projectsData = [
 El backend se desarrolló siguiendo una arquitectura Clean con C# y .NET Framework, con una base de datos PostgreSQL para el almacenamiento de metadatos y AWS S3 para el almacenamiento de las imágenes DICOM. El frontend se deasarrollo en JavaScript XML y HTML con el framework React + Vite. La aplicación incluye un sistema para cargar y compartir imágenes de forma segura, lista de médicos/pacientes de contacto frecuente y funcionalidades básicas de procesamiento de imágenes.`,
     technologies: ["C#", ".NET", "PostgreSQL", "AWS S3", "Azure", "DICOM", "Clean Architecture", "React", "Vite", "JavaScript", "HTML", "CSS", "Cornerstone.js"],
     image: maqui,
-    link: "https://maquiapi20250506175249-hzb0dafndpawhkfn.brazilsouth-01.azurewebsites.net/login",
+    link: "https://youtu.be/qWFCRb0zEDY",
     github: "https://github.com/Floquicanale/MAQUI",
     features: [
       "Herramientas para la visualización y procesamiento de imágenes DICOM 2D",
