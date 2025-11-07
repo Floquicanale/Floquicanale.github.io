@@ -169,7 +169,7 @@ const projectsDataEN = [
 The backend follows a Clean Architecture approach using C# and the .NET Framework, with a PostgreSQL database for metadata storage and AWS S3 for DICOM image storage. The frontend was built with JavaScript XML and HTML using React + Vite. The application includes secure image upload and sharing, a list of frequent doctors/patients, and basic image processing tools.`,
     technologies: ["C#", ".NET", "PostgreSQL", "AWS S3", "Azure", "DICOM", "Clean Architecture", "React", "Vite", "JavaScript", "HTML", "CSS", "Cornerstone.js"],
     image: maqui,
-    link: "https://maquiapi20250506175249-hzb0dafndpawhkfn.brazilsouth-01.azurewebsites.net/login",
+    link: "https://youtu.be/qWFCRb0zEDY",
     github: "https://github.com/Floquicanale/MAQUI",
     features: [
       "Tools for 2D DICOM image visualization and processing",
